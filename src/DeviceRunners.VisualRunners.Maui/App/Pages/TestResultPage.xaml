@@ -17,12 +17,12 @@
 
             <Label Text="{Binding TestCase.Message}" TextColor="{Binding TestCase.ResultStatus, Converter={StaticResource RunStatusToColorConverter}}" AutomationId="TestMessage" />
 
-            <Frame IsVisible="{Binding HasOutput}" Padding="10" HasShadow="False" BorderColor="DarkGray" CornerRadius="5" Margin="0,10" AutomationId="TestOutputFrame">
+            <Border IsVisible="{Binding HasOutput}" Padding="10" Stroke="DarkGray" StrokeShape="RoundRectangle 5" Margin="0,10" AutomationId="TestOutputFrame">
                 <StackLayout Spacing="5">
                     <Label Text="Test Output" FontAttributes="Bold" />
                     <Label Text="{Binding Output}" AutomationId="TestOutput" />
                 </StackLayout>
-            </Frame>
+            </Border>
 
             <Image Source="{Binding ErrorImage}"></Image>
             <Label Text="{Binding ErrorMessage}" FontAttributes="Bold" AutomationId="TestErrorMessage" />

@@ -20,6 +20,9 @@
     <!-- .NET 11 preview SDK flags net9.0 workloads as EOL -->
     <CheckEolWorkloads>false</CheckEolWorkloads>
     <CheckEolTargetFramework>false</CheckEolTargetFramework>
+
+    <!-- Avoid Editor binding warnings by using XAML source generation -->
+    <MauiXamlInflator>SourceGen</MauiXamlInflator>
   </PropertyGroup>
 
 </Project>
